@@ -66,4 +66,26 @@
     } else {
         initializeRevealAnimations();
     }
+    const contactForm = document.getElementById(
+    "contactForm"
+);
+
+const contactFormMessage = document.getElementById(
+    "contactFormMessage"
+);
+
+if (contactForm && contactFormMessage) {
+    contactForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        if (!contactForm.checkValidity()) {
+            contactForm.reportValidity();
+
+            return;
+        }
+
+        contactFormMessage.textContent =
+            "Form bilgileri hazırlandı. Statik demo sürümünde sunucu bağlantısı bulunmadığı için gerçek gönderim yapılmadı.";
+    });
+}
 })();

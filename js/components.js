@@ -106,6 +106,12 @@
                                     </div>
 
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link"
+                                        href="/tr/paketler/">
+                                        Paketler
+                                    </a>
+                                </li>
 
                                 <li class="nav-item">
                                     <a class="nav-link"
@@ -196,6 +202,7 @@
 
                                 <a href="/tr/">Ana Sayfa</a>
                                 <a href="/tr/hakkimizda/">Hakkımızda</a>
+                                <a href="/tr/paketler/">Paketler</a>
                                 <a href="/tr/blog/">Blog</a>
                                 <a href="/tr/iletisim/">İletişim</a>
 

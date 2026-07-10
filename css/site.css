@@ -121,9 +121,8 @@ button {
     border-bottom:
         1px solid var(--color-border);
 
-    backdrop-filter: blur(18px);
-
     -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
 }
 
 .site-header .navbar {
@@ -370,6 +369,7 @@ button {
     box-shadow:
         0 30px 80px rgba(0, 0, 0, 0.55);
 
+    -webkit-backdrop-filter: blur(22px);
     backdrop-filter: blur(22px);
 
     opacity: 0;
@@ -602,6 +602,7 @@ button {
         box-shadow:
             0 30px 80px rgba(0, 0, 0, 0.55);
 
+        -webkit-backdrop-filter: blur(22px);
         backdrop-filter: blur(22px);
     }
 
@@ -653,6 +654,7 @@ button {
 
         box-shadow: none;
 
+        -webkit-backdrop-filter: none;
         backdrop-filter: none;
 
         opacity: 1;
@@ -1026,7 +1028,7 @@ button {
     }
 
     .footer-bottom {
-        min-height: auto;
+        min-height: 0;
 
         flex-direction: column;
         align-items: flex-start;
@@ -1162,6 +1164,12 @@ html.reveal-ready .reveal.is-visible {
 
     background-size: 72px 72px;
 
+    -webkit-mask-image:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.7),
+            transparent 90%
+        );
     mask-image:
         linear-gradient(
             to bottom,
@@ -1526,6 +1534,7 @@ html.reveal-ready .reveal.is-visible {
         inset 0 0 60px rgba(255, 255, 255, 0.025),
         0 45px 100px rgba(0, 0, 0, 0.55);
 
+    -webkit-backdrop-filter: blur(22px);
     backdrop-filter: blur(22px);
 }
 
@@ -1680,6 +1689,7 @@ html.reveal-ready .reveal.is-visible {
     box-shadow:
         0 22px 55px rgba(0, 0, 0, 0.38);
 
+    -webkit-backdrop-filter: blur(18px);
     backdrop-filter: blur(18px);
 }
 
@@ -1894,7 +1904,7 @@ html.reveal-ready .reveal.is-visible {
 @media (max-width: 991.98px) {
 
     .hero-section {
-        min-height: auto;
+        min-height: 0;
     }
 
     .hero-container {
@@ -2723,6 +2733,7 @@ html.reveal-ready .reveal.is-visible {
     box-shadow:
         inset 0 0 60px rgba(255, 255, 255, 0.025),
         0 50px 100px rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
 }
 
@@ -2831,6 +2842,7 @@ html.reveal-ready .reveal.is-visible {
     border-radius: 16px;
     box-shadow:
         0 25px 60px rgba(0, 0, 0, 0.4);
+    -webkit-backdrop-filter: blur(18px);
     backdrop-filter: blur(18px);
 }
 
@@ -3303,6 +3315,7 @@ html.reveal-ready .reveal.is-visible {
     border-radius: 26px;
     box-shadow:
         0 50px 120px rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     transform:
         perspective(1300px)
@@ -3639,6 +3652,7 @@ html.reveal-ready .reveal.is-visible {
     border-radius: 15px;
     box-shadow:
         0 25px 65px rgba(0, 0, 0, 0.45);
+    -webkit-backdrop-filter: blur(18px);
     backdrop-filter: blur(18px);
     animation:
         cardFloat 5.5s ease-in-out infinite;
@@ -3743,7 +3757,7 @@ html.reveal-ready .reveal.is-visible {
 
     .dashboard-content {
         grid-template-columns: 52px 1fr;
-        min-height: auto;
+        min-height: 0;
     }
 
     .dashboard-main {
@@ -3974,6 +3988,7 @@ html.reveal-ready .reveal.is-visible {
     border-radius: 26px;
     box-shadow:
         0 50px 120px rgba(0, 0, 0, 0.52);
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     transform:
         perspective(1300px)
@@ -4365,6 +4380,7 @@ html.reveal-ready .reveal.is-visible {
     border-radius: 15px;
     box-shadow:
         0 25px 65px rgba(0, 0, 0, 0.45);
+    -webkit-backdrop-filter: blur(18px);
     backdrop-filter: blur(18px);
     animation:
         cardFloat 5.7s ease-in-out infinite;
@@ -4766,6 +4782,12 @@ html.reveal-ready .reveal.is-visible {
             transparent 1px
         );
     background-size: 35px 35px;
+    -webkit-mask-image:
+        radial-gradient(
+            circle,
+            #000 30%,
+            transparent 72%
+        );
     mask-image:
         radial-gradient(
             circle,
@@ -4798,6 +4820,7 @@ html.reveal-ready .reveal.is-visible {
     box-shadow:
         inset 0 0 60px rgba(255, 255, 255, 0.025),
         0 50px 110px rgba(0, 0, 0, 0.52);
+    -webkit-backdrop-filter: blur(22px);
     backdrop-filter: blur(22px);
 }
 
@@ -4900,6 +4923,7 @@ html.reveal-ready .reveal.is-visible {
     border-radius: 16px;
     box-shadow:
         0 25px 65px rgba(0, 0, 0, 0.42);
+    -webkit-backdrop-filter: blur(18px);
     backdrop-filter: blur(18px);
 }
 
@@ -5248,6 +5272,12 @@ html.reveal-ready .reveal.is-visible {
             transparent 1px
         );
     background-size: 55px 55px;
+    -webkit-mask-image:
+        linear-gradient(
+            to right,
+            #000,
+            transparent 80%
+        );
     mask-image:
         linear-gradient(
             to right,
@@ -5368,7 +5398,7 @@ html.reveal-ready .reveal.is-visible {
 
 @media (max-width: 991.98px) {
     .about-hero {
-        min-height: auto;
+        min-height: 0;
         padding: 100px 0;
     }
 
@@ -5411,7 +5441,7 @@ html.reveal-ready .reveal.is-visible {
     }
 
     .about-cta {
-        min-height: auto;
+        min-height: 0;
         flex-direction: column;
         align-items: flex-start;
         padding: 60px;
@@ -5663,6 +5693,7 @@ html.reveal-ready .reveal.is-visible {
     border-radius: 28px;
     box-shadow:
         0 45px 110px rgba(0, 0, 0, 0.48);
+    -webkit-backdrop-filter: blur(22px);
     backdrop-filter: blur(22px);
 }
 
@@ -5697,6 +5728,12 @@ html.reveal-ready .reveal.is-visible {
             transparent 1px
         );
     background-size: 45px 45px;
+    -webkit-mask-image:
+        linear-gradient(
+            135deg,
+            #000,
+            transparent 75%
+        );
     mask-image:
         linear-gradient(
             135deg,
@@ -6261,6 +6298,12 @@ html.reveal-ready .reveal.is-visible {
             transparent 1px
         );
     background-size: 44px 44px;
+    -webkit-mask-image:
+        linear-gradient(
+            135deg,
+            #000,
+            transparent 72%
+        );
     mask-image:
         linear-gradient(
             135deg,
@@ -6565,6 +6608,12 @@ html.reveal-ready .reveal.is-visible {
             transparent 1px
         );
     background-size: 55px 55px;
+    -webkit-mask-image:
+        linear-gradient(
+            to right,
+            #000,
+            transparent 82%
+        );
     mask-image:
         linear-gradient(
             to right,
@@ -6730,7 +6779,7 @@ html.reveal-ready .reveal.is-visible {
 @media (max-width: 991.98px) {
     .services-page-hero,
     .service-detail-hero {
-        min-height: auto;
+        min-height: 0;
         padding: 100px 0;
     }
 
@@ -6812,7 +6861,7 @@ html.reveal-ready .reveal.is-visible {
     }
 
     .service-cta {
-        min-height: auto;
+        min-height: 0;
         flex-direction: column;
         align-items: flex-start;
         padding: 60px;
@@ -6880,7 +6929,7 @@ html.reveal-ready .reveal.is-visible {
     .catalog-service {
         grid-template-columns:
             48px minmax(0, 1fr);
-        min-height: auto;
+        min-height: 0;
         gap: 18px;
         padding: 32px 5px;
     }
@@ -7301,6 +7350,7 @@ html.reveal-ready .reveal.is-visible {
     box-shadow:
         0 55px 130px rgba(0, 0, 0, 0.55);
 
+    -webkit-backdrop-filter: blur(22px);
     backdrop-filter: blur(22px);
 
     transform:
@@ -7341,6 +7391,12 @@ html.reveal-ready .reveal.is-visible {
 
     background-size: 42px 42px;
 
+    -webkit-mask-image:
+        linear-gradient(
+            135deg,
+            #000,
+            transparent 90%
+        );
     mask-image:
         linear-gradient(
             135deg,
@@ -7814,6 +7870,7 @@ html.reveal-ready .reveal.is-visible {
     box-shadow:
         0 18px 45px rgba(0, 0, 0, 0.35);
 
+    -webkit-backdrop-filter: blur(18px);
     backdrop-filter: blur(18px);
 }
 
@@ -9576,6 +9633,12 @@ html.reveal-ready .reveal.is-visible {
 
     background-size: 55px 55px;
 
+    -webkit-mask-image:
+        linear-gradient(
+            to right,
+            #000,
+            transparent 82%
+        );
     mask-image:
         linear-gradient(
             to right,
@@ -9769,7 +9832,7 @@ html.reveal-ready .reveal.is-visible {
 @media (max-width: 991.98px) {
 
     .content-hero {
-        min-height: auto;
+        min-height: 0;
 
         padding: 100px 0;
     }
@@ -9828,7 +9891,7 @@ html.reveal-ready .reveal.is-visible {
     }
 
     .content-cta {
-        min-height: auto;
+        min-height: 0;
 
         flex-direction: column;
         align-items: flex-start;
@@ -9944,7 +10007,7 @@ html.reveal-ready .reveal.is-visible {
     .creative-workflow-step:last-child,
     .creative-workflow-step:nth-child(2),
     .creative-workflow-step:nth-child(3) {
-        min-height: auto;
+        min-height: 0;
 
         padding: 0;
     }
@@ -10243,6 +10306,7 @@ html.reveal-ready .reveal.is-visible {
     box-shadow:
         0 55px 130px rgba(0, 0, 0, 0.55);
 
+    -webkit-backdrop-filter: blur(22px);
     backdrop-filter: blur(22px);
 
     transform:
@@ -10283,6 +10347,12 @@ html.reveal-ready .reveal.is-visible {
 
     background-size: 42px 42px;
 
+    -webkit-mask-image:
+        linear-gradient(
+            135deg,
+            #000,
+            transparent 90%
+        );
     mask-image:
         linear-gradient(
             135deg,
@@ -10526,6 +10596,7 @@ html.reveal-ready .reveal.is-visible {
     box-shadow:
         0 20px 50px rgba(0, 0, 0, 0.4);
 
+    -webkit-backdrop-filter: blur(16px);
     backdrop-filter: blur(16px);
 }
 
@@ -11211,6 +11282,25 @@ html.reveal-ready .reveal.is-visible {
     box-shadow:
         0 0 30px rgba(124, 92, 255, 0.22);
 }
+.strategy-competition-bar-one {
+    height: 38%;
+}
+
+.strategy-competition-bar-two {
+    height: 57%;
+}
+
+.strategy-competition-bar-three {
+    height: 46%;
+}
+
+.strategy-competition-brand {
+    height: 82%;
+}
+
+.strategy-competition-bar-five {
+    height: 61%;
+}
 
 
 /* =========================
@@ -11269,6 +11359,21 @@ html.reveal-ready .reveal.is-visible {
     color: var(--color-text-muted);
 
     font-size: 0.63rem;
+}
+.strategy-channel-instagram {
+    width: 91%;
+}
+
+.strategy-channel-facebook {
+    width: 72%;
+}
+
+.strategy-channel-tiktok {
+    width: 84%;
+}
+
+.strategy-channel-linkedin {
+    width: 48%;
 }
 
 
@@ -11431,6 +11536,12 @@ html.reveal-ready .reveal.is-visible {
     background-size:
         55px 55px;
 
+    -webkit-mask-image:
+        linear-gradient(
+            to right,
+            #000,
+            transparent 82%
+        );
     mask-image:
         linear-gradient(
             to right,
@@ -11592,7 +11703,7 @@ html.reveal-ready .reveal.is-visible {
 @media (max-width: 991.98px) {
 
     .strategy-hero {
-        min-height: auto;
+        min-height: 0;
 
         padding: 100px 0;
     }
@@ -11644,7 +11755,7 @@ html.reveal-ready .reveal.is-visible {
     }
 
     .strategy-cta {
-        min-height: auto;
+        min-height: 0;
 
         flex-direction: column;
         align-items: flex-start;
@@ -12023,6 +12134,7 @@ html.reveal-ready .reveal.is-visible {
     box-shadow:
         0 55px 130px rgba(0, 0, 0, 0.55);
 
+    -webkit-backdrop-filter: blur(22px);
     backdrop-filter: blur(22px);
 
     transform:
@@ -12063,6 +12175,12 @@ html.reveal-ready .reveal.is-visible {
 
     background-size: 42px 42px;
 
+    -webkit-mask-image:
+        linear-gradient(
+            135deg,
+            #000,
+            transparent 92%
+        );
     mask-image:
         linear-gradient(
             135deg,
@@ -13687,6 +13805,12 @@ html.reveal-ready .reveal.is-visible {
     background-size:
         55px 55px;
 
+    -webkit-mask-image:
+        linear-gradient(
+            to right,
+            #000,
+            transparent 82%
+        );
     mask-image:
         linear-gradient(
             to right,
@@ -13845,7 +13969,7 @@ html.reveal-ready .reveal.is-visible {
 @media (max-width: 991.98px) {
 
     .analytics-hero {
-        min-height: auto;
+        min-height: 0;
 
         padding: 100px 0;
     }
@@ -13902,7 +14026,7 @@ html.reveal-ready .reveal.is-visible {
     }
 
     .analytics-cta {
-        min-height: auto;
+        min-height: 0;
 
         flex-direction: column;
         align-items: flex-start;
@@ -14275,6 +14399,7 @@ html.reveal-ready .reveal.is-visible {
     border-radius: 30px;
     box-shadow:
         0 55px 130px rgba(0, 0, 0, 0.55);
+    -webkit-backdrop-filter: blur(22px);
     backdrop-filter: blur(22px);
 }
 
@@ -14293,6 +14418,12 @@ html.reveal-ready .reveal.is-visible {
             transparent 1px
         );
     background-size: 42px 42px;
+    -webkit-mask-image:
+        linear-gradient(
+            135deg,
+            #000,
+            transparent 90%
+        );
     mask-image:
         linear-gradient(
             135deg,
@@ -14985,6 +15116,12 @@ html.reveal-ready .reveal.is-visible {
             transparent 1px
         );
     background-size: 55px 55px;
+    -webkit-mask-image:
+        linear-gradient(
+            to right,
+            #000,
+            transparent 82%
+        );
     mask-image:
         linear-gradient(
             to right,
@@ -15101,7 +15238,7 @@ html.reveal-ready .reveal.is-visible {
 @media (max-width: 991.98px) {
 
     .packages-hero {
-        min-height: auto;
+        min-height: 0;
         padding: 100px 0;
     }
 
@@ -15139,7 +15276,7 @@ html.reveal-ready .reveal.is-visible {
     }
 
     .packages-cta {
-        min-height: auto;
+        min-height: 0;
         flex-direction: column;
         align-items: flex-start;
         padding: 60px;
@@ -15204,7 +15341,7 @@ html.reveal-ready .reveal.is-visible {
     }
 
     .package-card-heading p {
-        min-height: auto;
+        min-height: 0;
     }
 
     .packages-cta-section {
@@ -15395,6 +15532,7 @@ html.reveal-ready .reveal.is-visible {
     border-radius: 30px;
     box-shadow:
         0 55px 130px rgba(0, 0, 0, 0.55);
+    -webkit-backdrop-filter: blur(22px);
     backdrop-filter: blur(22px);
 }
 
@@ -15412,6 +15550,12 @@ html.reveal-ready .reveal.is-visible {
             transparent 1px
         );
     background-size: 42px 42px;
+    -webkit-mask-image:
+        linear-gradient(
+            135deg,
+            #000,
+            transparent 90%
+        );
     mask-image:
         linear-gradient(
             135deg,
@@ -16373,6 +16517,12 @@ html.reveal-ready .reveal.is-visible {
             transparent 1px
         );
     background-size: 55px 55px;
+    -webkit-mask-image:
+        linear-gradient(
+            to right,
+            #000,
+            transparent 82%
+        );
     mask-image:
         linear-gradient(
             to right,
@@ -16482,7 +16632,7 @@ html.reveal-ready .reveal.is-visible {
 @media (max-width: 991.98px) {
 
     .blog-hero {
-        min-height: auto;
+        min-height: 0;
         padding: 100px 0;
     }
 
@@ -16523,7 +16673,7 @@ html.reveal-ready .reveal.is-visible {
     }
 
     .blog-cta {
-        min-height: auto;
+        min-height: 0;
         flex-direction: column;
         align-items: flex-start;
         padding: 60px;
@@ -16857,6 +17007,7 @@ html.reveal-ready .reveal.is-visible {
     box-shadow:
         0 55px 130px rgba(0, 0, 0, 0.55);
 
+    -webkit-backdrop-filter: blur(22px);
     backdrop-filter: blur(22px);
 }
 
@@ -16880,6 +17031,12 @@ html.reveal-ready .reveal.is-visible {
 
     background-size: 42px 42px;
 
+    -webkit-mask-image:
+        linear-gradient(
+            135deg,
+            #000,
+            transparent 90%
+        );
     mask-image:
         linear-gradient(
             135deg,
@@ -17519,7 +17676,7 @@ html.reveal-ready .reveal.is-visible {
 @media (max-width: 991.98px) {
 
     .contact-hero {
-        min-height: auto;
+        min-height: 0;
 
         padding: 100px 0;
     }
@@ -17573,7 +17730,7 @@ html.reveal-ready .reveal.is-visible {
     }
 
     .contact-form-panel {
-        min-height: auto;
+        min-height: 0;
 
         padding: 22px;
 
@@ -17745,6 +17902,7 @@ span:last-child {
     box-shadow:
         0 25px 65px rgba(0, 0, 0, 0.5);
 
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
 }
 

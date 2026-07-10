@@ -256,23 +256,54 @@
         ar: "AR"
     };
 
-    const getCurrentLocale = () => {
-        const firstPathPart = window.location.pathname
+    const getPathParts = () =>
+        window.location.pathname
             .split("/")
-            .filter(Boolean)[0];
+            .filter(Boolean)
+            .map((part) => decodeURIComponent(part));
 
-        return supportedLocales.includes(firstPathPart)
-            ? firstPathPart
+    const getLocalePathIndex = (
+        pathParts,
+        locale
+    ) => {
+        for (
+            let index = pathParts.length - 1;
+            index >= 0;
+            index--
+        ) {
+            if (
+                locale
+                    ? pathParts[index] === locale
+                    : supportedLocales.includes(pathParts[index])
+            ) {
+                return index;
+            }
+        }
+
+        return -1;
+    };
+
+    const getCurrentLocale = () => {
+        const pathParts = getPathParts();
+        const localeIndex = getLocalePathIndex(
+            pathParts
+        );
+
+        return localeIndex >= 0
+            ? pathParts[localeIndex]
             : "tr";
     };
 
     const getCurrentRouteKey = (locale) => {
-        const pathParts = window.location.pathname
-            .split("/")
-            .filter(Boolean);
+        const pathParts = getPathParts();
+        const localeIndex = getLocalePathIndex(
+            pathParts,
+            locale
+        );
 
         const relativePath = pathParts
-            .slice(1)
+            .slice(localeIndex + 1)
+            .filter((part) => part.toLowerCase() !== "index.html")
             .join("/");
 
         const localeRoutes = routePaths[locale];
@@ -291,6 +322,33 @@
         routeKey
     ) => {
         const path = routePaths[locale][routeKey];
+
+        if (window.location.protocol === "file:") {
+            const pathParts = getPathParts();
+            const localeIndex = getLocalePathIndex(
+                pathParts
+            );
+            const directoryParts = pathParts[
+                pathParts.length - 1
+            ].toLowerCase() === "index.html"
+                ? pathParts.slice(0, -1)
+                : pathParts;
+            const levelsToProjectRoot = Math.max(
+                1,
+                directoryParts.length - localeIndex
+            );
+            const targetParts = [
+                locale
+            ];
+
+            if (path) {
+                targetParts.push(path);
+            }
+
+            targetParts.push("index.html");
+
+            return `${"../".repeat(levelsToProjectRoot)}${targetParts.join("/")}`;
+        }
 
         if (!path) {
             return `/${locale}/`;

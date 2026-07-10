@@ -14,18 +14,30 @@
     <script>
         (function () {
             const language = (navigator.language || "tr").toLowerCase();
+            const isFileProtocol = window.location.protocol === "file:";
+            const getLanguageTarget = (locale) =>
+                `./${locale}/${isFileProtocol ? "index.html" : ""}`;
 
-            let target = "./tr/";
+            let locale = "tr";
 
             if (language.startsWith("en")) {
-                target = "./en/";
+                locale = "en";
             } else if (language.startsWith("ru")) {
-                target = "./ru/";
+                locale = "ru";
             } else if (language.startsWith("ar")) {
-                target = "./ar/";
+                locale = "ar";
             }
 
-            window.location.replace(target);
+            window.addEventListener("DOMContentLoaded", () => {
+                document.querySelectorAll("[data-language-route]")
+                    .forEach((link) => {
+                        link.href = getLanguageTarget(
+                            link.dataset.languageRoute
+                        );
+                    });
+            });
+
+            window.location.replace(getLanguageTarget(locale));
         })();
     </script>
 </head>
@@ -37,10 +49,10 @@
         <p>Select your language:</p>
 
         <nav aria-label="Language selection">
-            <a href="./tr/">Türkçe</a>
-            <a href="./en/">English</a>
-            <a href="./ru/">Русский</a>
-            <a href="./ar/">العربية</a>
+            <a href="./tr/" data-language-route="tr">Türkçe</a>
+            <a href="./en/" data-language-route="en">English</a>
+            <a href="./ru/" data-language-route="ru">Русский</a>
+            <a href="./ar/" data-language-route="ar">العربية</a>
         </nav>
     </main>
 </body>

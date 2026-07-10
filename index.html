@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hancer Group | Social Media Agency</title>
+
+    <meta name="description"
+          content="Choose your language to explore Hancer Group social media management, digital advertising, content production and digital strategy services.">
+
+    <meta name="robots" content="noindex, follow">
+
+    <script>
+        (function () {
+            const language = (navigator.language || "tr").toLowerCase();
+
+            let target = "./tr/";
+
+            if (language.startsWith("en")) {
+                target = "./en/";
+            } else if (language.startsWith("ru")) {
+                target = "./ru/";
+            } else if (language.startsWith("ar")) {
+                target = "./ar/";
+            }
+
+            window.location.replace(target);
+        })();
+    </script>
+</head>
+
+<body>
+    <main>
+        <h1>Hancer Group</h1>
+
+        <p>Select your language:</p>
+
+        <nav aria-label="Language selection">
+            <a href="./tr/">Türkçe</a>
+            <a href="./en/">English</a>
+            <a href="./ru/">Русский</a>
+            <a href="./ar/">العربية</a>
+        </nav>
+    </main>
+</body>
+</html>
